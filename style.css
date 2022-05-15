@@ -71,6 +71,7 @@ h1 {
     margin-right: 50px;
     border-radius: 5px;
     color: #55F991;
+    word-wrap: break-word;
 }
 
 #passwords {

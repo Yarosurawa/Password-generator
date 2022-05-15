@@ -33,40 +33,48 @@ function render() {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
             password[i].textContent=func()
+            password[i].style = 'height: auto'
         }
     } else if (r09.checked == false && raz.checked == true && raZ.checked == true) {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
             password[i].textContent=func()
+            password[i].style = 'height: auto'
         }
     } else if (r09.checked == false && raz.checked == false && raZ.checked == true) {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
             password[i].textContent=func()
+            password[i].style = 'height: auto'
         }
     } else if (r09.checked == true && raz.checked == true && raZ.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'abcdefghijklmnopqrstuvwxyz0123456789'
             password[i].textContent=func()
+            password[i].style = 'height: auto'
         }
     } else if (r09.checked == true && raz.checked == false && raZ.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = '0123456789'
             password[i].textContent=func()
+            password[i].style = 'height: auto'
         }
     } else if (r09.checked == false && raz.checked == true && raZ.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'abcdefghijklmnopqrstuvwxyz'
             password[i].textContent=func()
+            password[i].style = 'height: auto'
         }
     } else if (r09.checked == true && raz.checked == false && raZ.checked == true) {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
             password[i].textContent=func()
+            password[i].style = 'height: auto'
         }
     } else {
         for(let i = 0; i < 4; i++) {
-            password[i].textContent = 'select some options please'           
+            password[i].textContent = 'select some options please'     
+            password[i].style = 'height: auto'      
         }
     }
 } 

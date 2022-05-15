@@ -105,7 +105,8 @@ hr {
     input[type='range'] {
       overflow: hidden;
       width: 300px;
-      -webkit-appearance: none;
+      height: 10px;
+      /* -webkit-appearance: searchfield-results-decoration; */
       background-color: #9a905d;
       border-radius: 20px;
     }

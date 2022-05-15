@@ -12,6 +12,8 @@ count.oninput = function() {
     countp.textContent = count.value;
 }
 
+countp.textContent = count.value;
+
 r09.oninput = function() {
     render()
 }

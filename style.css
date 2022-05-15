@@ -9,6 +9,7 @@ body {
 
 .green {
     color:#55F991;
+    margin-bottom: 10px;
 }
 
 p {
@@ -18,7 +19,9 @@ p {
 h1 {
     font-family: 'Karla';
     font-size: 70px;
-    line-height: 10px;
+    line-height: 60px;
+    margin: 0;
+    padding: 0;
 }
 
 .radios {

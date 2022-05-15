@@ -3,6 +3,7 @@ let password = document.querySelectorAll('#password');
 let r09 = document.getElementById('0-9');
 let raz = document.getElementById('a-z');
 let raZ = document.getElementById('a-Z');
+let $ = document.getElementById('$');
 let count = document.getElementById('characters-count');
 let countp = document.getElementById('character-count-p');
 let btn = document.getElementById('btn');
@@ -24,6 +25,10 @@ raZ.oninput = function() {
     render()
 }
 
+$.oninput = function() {
+    render()
+}
+
 btn.onclick = function() {
     render()
 }
@@ -31,45 +36,87 @@ btn.onclick = function() {
 let possible = ""
 
 function render() {
-    if (r09.checked == true && raz.checked == true && raZ.checked == true) {
+    if (r09.checked == true && raz.checked == true && raZ.checked == true && $.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }
-    } else if (r09.checked == false && raz.checked == true && raZ.checked == true) {
+    } else if (r09.checked == false && raz.checked == true && raZ.checked == true && $.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }
-    } else if (r09.checked == false && raz.checked == false && raZ.checked == true) {
+    } else if (r09.checked == false && raz.checked == false && raZ.checked == true && $.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }
-    } else if (r09.checked == true && raz.checked == true && raZ.checked == false) {
+    } else if (r09.checked == true && raz.checked == true && raZ.checked == false && $.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'abcdefghijklmnopqrstuvwxyz0123456789'
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }
-    } else if (r09.checked == true && raz.checked == false && raZ.checked == false) {
+    } else if (r09.checked == true && raz.checked == false && raZ.checked == false && $.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = '0123456789'
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }
-    } else if (r09.checked == false && raz.checked == true && raZ.checked == false) {
+    } else if (r09.checked == false && raz.checked == true && raZ.checked == false && $.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'abcdefghijklmnopqrstuvwxyz'
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }
-    } else if (r09.checked == true && raz.checked == false && raZ.checked == true) {
+    } else if (r09.checked == true && raz.checked == false && raZ.checked == true && $.checked == false) {
         for(let i = 0; i < 4; i++) {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+            password[i].textContent=func()
+            password[i].style = 'height: auto'
+        }
+    } else if (r09.checked == true && raz.checked == true && raZ.checked == true && $.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!";#$%&\'()*+,-./:;&lt = &gt?@[]^_`{|}~'
+            password[i].textContent=func()
+            password[i].style = 'height: auto'
+        }
+    } else if (r09.checked == false && raz.checked == true && raZ.checked == true && $.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!";#$%&\'()*+,-./:;&lt = &gt?@[]^_`{|}~'
+            password[i].textContent=func()
+            password[i].style = 'height: auto'
+        }
+    } else if (r09.checked == false && raz.checked == false && raZ.checked == true && $.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!";#$%&\'()*+,-./:;&lt = &gt?@[]^_`{|}~'
+            password[i].textContent=func()
+            password[i].style = 'height: auto'
+        }
+    } else if (r09.checked == true && raz.checked == true && raZ.checked == false && $.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'abcdefghijklmnopqrstuvwxyz0123456789!";#$%&\'()*+,-./:;&lt = &gt?@[]^_`{|}~'
+            password[i].textContent=func()
+            password[i].style = 'height: auto'
+        }
+    } else if (r09.checked == true && raz.checked == false && raZ.checked == false && $.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = '0123456789!";#$%&\'()*+,-./:;&lt = &gt?@[]^_`{|}~'
+            password[i].textContent=func()
+            password[i].style = 'height: auto'
+        }
+    } else if (r09.checked == false && raz.checked == true && raZ.checked == false && $.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'abcdefghijklmnopqrstuvwxyz!";#$%&\'()*+,-./:;&lt = &gt?@[]^_`{|}~'
+            password[i].textContent=func()
+            password[i].style = 'height: auto'
+        }
+    } else if (r09.checked == true && raz.checked == false && raZ.checked == true && $.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!";#$%&\'()*+,-./:;&lt = &gt?@[]^_`{|}~'
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }

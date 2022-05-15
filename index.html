@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>password generator</title>
+</head>
+<body>
+    <h1>Generate a</h1>
+    <h1 class="green">random password</h1>
+    <div class="info">
+        <div class="characters-count-div">
+            <p>how many characters?</p>
+            <input type="number" id="characters-count">
+        </div>
+        <div class="characters-type-div">
+            <p>select characters type:</p>
+            <div class="radios">
+                <div class="radio-div"><p>0-9</p><input type="radio" checked name="radio" id="0-9" value="0-9" class="radio"></div>
+                <div class="radio-div"><p>a-z</p><input type="radio" name="radio" id="a-z" value="a-z" class="radio"></div>
+                <div class="radio-div"><p>a-Z</p><input type="radio" name="radio" id="a-Z" value="a-Z" class="radio"></div>
+                <div class="radio-div"><p>a-9</p><input type="radio" name="radio" id="a-9" value="a-9" class="radio"></div>
+                <div class="radio-div"><p>A-9</p><input type="radio" name="radio" id="A-9" value="A-9" class="radio"></div>
+            </div>
+        </div>
+    </div>
+    <button onclick="click()" id="btn"><img src="Icon.svg"> Generate passwords</button>
+    <hr>
+    <div id="passwords">
+        <p id="password">Password</p>
+        <p id="password">Password</p>
+        <p id="password">Password</p>
+        <p id="password">Password</p>
+    </div>
+
+    <h2 style="text-align: center; margin-right: 40px;">click on text to copy to clipboard</h1>
+    <script src="index.js"></script>
+</body>
+</html>

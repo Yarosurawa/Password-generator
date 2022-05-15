@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Karla:wght@800&display=swap');
+
+body {
+    margin: 100px;
+    background-color: #1F2937;
+    font-family: 'Inter';
+    color: white;
+}
+
+.green {
+    color:#55F991;
+}
+
+p {
+    font-size: 30px;
+}
+
+h1 {
+    font-family: 'Karla';
+    font-size: 70px;
+    line-height: 10px;
+}
+
+.radios {
+    display: flex;
+}
+
+.radio-div {
+    margin-left: 10px;
+}
+
+.radio-div > p {
+    margin: 0;
+}
+
+.characters-count-div {
+    margin-right: 50px;
+}
+
+.info {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.info>div>p{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#btn {
+    display: flex;
+    background: #55F991;
+    border: 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    vertical-align: middle;
+    justify-content: space-around;
+    width: 400px;
+    margin-top: 30px;
+}
+
+#password {
+    background-color:#273549 ;
+    text-align: center;
+    height: 35px;
+    padding: 10px 0;
+    margin-right: 50px;
+    border-radius: 5px;
+    color: #55F991;
+}
+
+#passwords {
+    display: grid;
+    gap: 0;
+    margin: 0 70px;
+    grid-template-columns: 50% 50%;
+}
+
+hr {
+    height: 0;
+    margin: 50px 0;
+}
+
+#characters-count {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: 0.2s linear;
+    font-size: 25px;
+    width: 50px;
+    position: relative;
+    top: 15px;
+    border: 1px solid #999;
+    background-color: #1F2937;
+    color: white;
+    padding: 5px;
+}
+#characters-count:focus {
+    border: 3px solid #55F991;
+}
+
+.radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid #999;
+    transition: 0.2s linear;
+    outline: none;
+    left: 35%;
+  
+    position: relative;
+    top: 4px;
+}
+
+.radio:checked {
+    border: 6px solid #55f991;
+}

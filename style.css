@@ -85,21 +85,29 @@ hr {
 }
 
 #characters-count {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    overflow: hidden;
     transition: 0.2s linear;
     font-size: 25px;
-    width: 50px;
     position: relative;
     top: 15px;
-    border: 1px solid #999;
-    background-color: #1F2937;
-    color: white;
-    padding: 5px;
+    border: 1px solid #1F2937;
+    color: #55F991;
+    background-color: transparent;
 }
-#characters-count:focus {
-    border: 3px solid #55F991;
+
+#characters-count::-moz-range-track {
+    background-color: #2F3947;
+    border-radius: 50px;
+}
+#characters-count::-moz-range-progress {
+    border: 1px solid #55F991;
+    background-color: #55f991;
+    border-radius: 50px;
+}
+#characters-count::-moz-range-thumb {
+    border: 3px solid #999;
+    background-color: #1F2937;
+    border-radius: 50px;
 }
 
 .radio {
@@ -122,4 +130,10 @@ hr {
 
 .radio:checked {
     border: 6px solid #55f991;
+}
+
+#character-count-p {
+    margin: 0;
+    margin-top: 20px;
+    line-height: 0px;
 }

@@ -12,6 +12,16 @@ count.oninput = function() {
     countp.textContent = count.value;
 }
 
+r09.oninput = function() {
+    render()
+}
+raz.oninput = function() {
+    render()
+}
+raZ.oninput = function() {
+    render()
+}
+
 btn.onclick = function() {
     render()
 }

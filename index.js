@@ -3,8 +3,6 @@ let password = document.querySelectorAll('#password');
 let r09 = document.getElementById('0-9');
 let raz = document.getElementById('a-z');
 let raZ = document.getElementById('a-Z');
-let ra9 = document.getElementById('a-9');
-let rA9 = document.getElementById('A-9');
 let count = document.getElementById('characters-count');
 let countp = document.getElementById('character-count-p');
 let btn = document.getElementById('btn');
@@ -18,75 +16,52 @@ btn.onclick = function() {
     render()
 }
 
+let possible = ""
+
 function render() {
-    if (r09.checked == true) {
+    if (r09.checked == true && raz.checked == true && raZ.checked == true) {
         for(let i = 0; i < 4; i++) {
-            password[i].textContent=func09()
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+            password[i].textContent=func()
         }
-    } else if (raz.checked == true) {
+    } else if (r09.checked == false && raz.checked == true && raZ.checked == true) {
         for(let i = 0; i < 4; i++) {
-            password[i].textContent=funcaz()
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+            password[i].textContent=func()
         }
-    } else if (raZ.checked == true) {
+    } else if (r09.checked == false && raz.checked == false && raZ.checked == true) {
         for(let i = 0; i < 4; i++) {
-            password[i].textContent=funcaZ()
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            password[i].textContent=func()
         }
-    } else if (ra9.checked == true) {
+    } else if (r09.checked == true && raz.checked == true && raZ.checked == false) {
         for(let i = 0; i < 4; i++) {
-            password[i].textContent=funca9()
+            possible = 'abcdefghijklmnopqrstuvwxyz0123456789'
+            password[i].textContent=func()
         }
-    } else if (rA9.checked == true) {
+    } else if (r09.checked == true && raz.checked == false && raZ.checked == false) {
         for(let i = 0; i < 4; i++) {
-            password[i].textContent=funcA9()
+            possible = '0123456789'
+            password[i].textContent=func()
+        }
+    } else if (r09.checked == false && raz.checked == true && raZ.checked == false) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'abcdefghijklmnopqrstuvwxyz'
+            password[i].textContent=func()
         }
     }
-}
+} 
 
 
-function func09() {
+
+function func() {
     let text = "";
-    let possible = "0123456789";
     for (var i = 0; i < count.value; i++) {
         text += possible. charAt(Math. floor(Math. random() * possible. length));
     }
     return text
 }
 
-function funcaz() {
-    let text = "";
-    let possible = "abcdefghijklmnopqrstuvwxyz";
-    for (var i = 0; i < count.value; i++) {
-        text += possible. charAt(Math. floor(Math. random() * possible. length));
-    }
-    return text
-}
-
-function funcaZ() {
-    let text = "";
-    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    for (var i = 0; i < count.value; i++) {
-        text += possible. charAt(Math. floor(Math. random() * possible. length));
-    }
-    return text
-}
-
-function funca9() {
-    let text = "";
-    let possible = "abcdefghijklmnopqrstuvwxyz0123456789";
-    for (var i = 0; i < count.value; i++) {
-        text += possible. charAt(Math. floor(Math. random() * possible. length));
-    }
-    return text
-}
-
-function funcA9() {
-    let text = "";
-    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for (var i = 0; i < count.value; i++) {
-        text += possible. charAt(Math. floor(Math. random() * possible. length));
-    }
-    return text
-}
 for (let i = 0; i < 4; i++){
 password[i].onclick = function() {
     var elem = document.createElement("textarea");

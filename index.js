@@ -64,6 +64,10 @@ function render() {
             possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
             password[i].textContent=func()
         }
+    } else {
+        for(let i = 0; i < 4; i++) {
+            password[i].textContent = 'select some options please'           
+        }
     }
 } 
 

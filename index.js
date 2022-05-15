@@ -83,5 +83,6 @@ password[i].onclick = function() {
     elem.select();
     document.execCommand("copy");
     document.body.removeChild(elem);
+    alert("Copied to a clipboard")
 }}
 ;})

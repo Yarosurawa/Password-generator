@@ -1,4 +1,3 @@
-// setInterval(() => {
 let password = document.querySelectorAll('#password');
 let r09 = document.getElementById('0-9');
 let raz = document.getElementById('a-z');
@@ -338,4 +337,3 @@ password[i].onclick = function() {
 }}
 
 render()
-// ;})

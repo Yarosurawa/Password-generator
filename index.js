@@ -59,6 +59,11 @@ function render() {
             possible = 'abcdefghijklmnopqrstuvwxyz'
             password[i].textContent=func()
         }
+    } else if (r09.checked == true && raz.checked == false && raZ.checked == true) {
+        for(let i = 0; i < 4; i++) {
+            possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+            password[i].textContent=func()
+        }
     }
 } 
 

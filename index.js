@@ -307,7 +307,7 @@ function render() {
             password[i].textContent=func()
             password[i].style = 'height: auto'
         }
-    } else {
+    } else if (r09.checked == false && raz.checked == false && raZ.checked == false && $.checked == false && con.checked == false) {
         for(let i = 0; i < 4; i++) {
             password[i].textContent = 'select some options please'     
             password[i].style = 'height: auto'      

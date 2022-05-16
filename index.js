@@ -8,34 +8,18 @@ let contain = document.getElementById('contains-input');
 let count = document.getElementById('characters-count');
 let countp = document.getElementById('character-count-p');
 let btn = document.getElementById('btn');
-
+countp.textContent = count.value;
 count.oninput = function() {
-    render()
+    render();
     countp.textContent = count.value;
 }
-
-countp.textContent = count.value;
-
-r09.oninput = function() {
-    render()
-}
-raz.oninput = function() {
-    render()
-}
-raZ.oninput = function() {
-    render()
-}
-
-$.oninput = function() {
-    render()
-}
-
-btn.onclick = function() {
-    render()
-}
-
+r09.oninput = function() {render()}
+raz.oninput = function() {render()}
+raZ.oninput = function() {render()}
+$.oninput = function() {render()}
+con.oninput = function() {render()}
+btn.onclick = function() {render()}
 let possible = ""
-
 function render() {
     if (r09.checked == true && raz.checked == true && raZ.checked == true && $.checked == false && con.checked == false) {
         for(let i = 0; i < 4; i++) {
@@ -314,9 +298,6 @@ function render() {
         }
     }
 } 
-
-
-
 function func() {
     let text = "";
     for (var i = 0; i < count.value; i++) {
@@ -335,5 +316,4 @@ password[i].onclick = function() {
     document.body.removeChild(elem);
     alert("Copied to a clipboard")
 }}
-
 render()

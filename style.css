@@ -51,7 +51,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-#btn {
+button {
     display: flex;
     background: #55F991;
     border: 0;
@@ -62,8 +62,18 @@ h1 {
     padding: 10px;
     vertical-align: middle;
     justify-content: space-around;
+    width: 600px;
+    margin: 30px auto;
+}
+
+#btn {
+    margin:30px 0 0 0;
     width: 400px;
-    margin-top: 30px;
+}
+
+button>a {
+    text-decoration: none;
+    color: white;
 }
 
 #password {
